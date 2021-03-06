@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="I'm Poppy's University Exam Countdown">
+    <meta property="og:url" content="https://impoppybutgithub.github.io/countdown.html">
+    <meta property="og:title" content="I'm Poppy's University Exam Countdown.">
+    <meta property="og:description"
+        content="I'm Poppy's own network. You can find my own information and other projects in the website.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+
+    <title>I'm Poppy's Portfolio - Countdown</title>
+    <link rel="icon" href="https://impoppy.is-inside.me/rIgqRaTB.png" />
+</head>
+
+<body>
+    <div class="countdown">
+        <h1>University Exam Countdown</h1>
+        <p id="demo"></p>
+    </div>
+
+    <div class="projects">
+        <button onclick="location.href='/index.html'">
+            Go Back
+        </button>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <p class="footerText">Copyright © 2021 | All Rights Reserved. | Designed by <a href="https://github.com/impoppybutgithub">impoppybutgithub</a>. | Hey, remember this is an <a href="https://github.com/impoppybutgithub/impoppybutgithub.github.io">open source</a> project and <a>❤️</a></p>
+        </footer>
+    </div>
+</body>
+
+<script>
+    var countDownDate = new Date("June 19, 2021 09:30:00").getTime();
+
+    var x = setInterval(function () {
+
+        var now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "WOOO! EXPIRED.";
+        }
+    }, 1000);
+</script>
+
+</html>

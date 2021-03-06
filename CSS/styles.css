@@ -1,0 +1,479 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: #99AAB5;
+    background: #2C2F33;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Media Queries */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #99AAB5;
+        background-color: #2C2F33;
+    }
+
+    a.github {
+        margin-right: 14px;
+        color: #99AAB5;
+    }
+
+    a.github:hover,  
+    a.github:focus,
+    a.github:active {
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+    }
+
+    a.steam {
+        margin-left: 14px;
+        color: #99AAB5;
+    }
+
+    a.steam:hover,
+    a.steam:focus,
+    a.steam:active {
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) { /* For Mobile Devices */
+    body {
+        font-size: 22px;
+        justify-content: center;
+    }
+
+    div.global {
+        text-align: center;
+        margin: 96px 0;
+    }
+
+    h3.welcome {
+        font-size: 52px;
+    }
+
+    p.details1 {
+        font-size: 24px;
+    }
+
+    p.details2 {
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    div.countdown h1 {
+        font-size: 42px;
+    }
+
+    div.countdown p {
+        font-size: 48px;
+    }
+
+    footer {
+        text-align: center;
+        background: fixed;
+    }
+
+    footer p {
+        font-size: 8px;
+        margin: 35px 0;
+    }   
+}
+
+/* End of Media Queries */
+
+.global {
+    text-align: center;
+    margin: 128px 0;
+}
+
+.animate__pulse {
+    display: inline-block;
+    margin: 20px 0 20px;
+    border-radius: 50%;
+    width: 270px;
+
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(1);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+.welcome {
+    font-size: 64px;
+    margin: 0 0 1px;
+}
+
+.details1 {
+    font-size: 24px;
+}
+
+.details1 a {
+    text-decoration: none;
+    color: #7289DA;
+}
+
+.details1 a:hover {
+    color: #99AAB5;
+}
+
+.details2 {
+    font-size: 16px;
+}
+
+.projects {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.projects h3 {
+    font-size: 32px;
+}
+
+.projects button {
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 2px 4px 14px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.projects button:hover {
+    background-color: #99AAB5;
+    color: black;
+}
+
+.project-context {
+    background-color: white;
+    margin: 0 20px;
+    padding: 30px;
+    border-radius: 6px;
+    transform: translateY(-60px);
+    transition: 0.3s linear;
+}
+
+.project-context a {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    background: fixed;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 25px 0;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #7289DA;
+}
+
+footer p a:hover {
+    color: #7289DA;
+}
+
+.social-medias {
+    position: relative;
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 44px;
+}
+
+.buttons {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+
+i {
+   width: 50px;
+   height: 45px;
+   -ms-transition: 0.4s ease-in-out;
+   -webkit-transition: 0.4s ease-in-out;
+   transition: 0.4s ease-in-out;
+}
+
+i:hover {
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+}
+
+.twitter {
+    margin-right: 14px;
+    color: #99AAB5;
+}
+
+.twitter:hover,
+.twitter:focus,
+.twitter:active {
+    color: #00ACED;
+    border-color: #00ACED;
+}
+
+.github {
+    margin-right: 14px;
+    color: #99AAB5;
+}
+
+.github:hover,
+.github:focus,
+.github:active {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.yt {
+    color: #99AAB5;
+}
+
+.yt:hover,
+.yt:focus,
+.yt:active {
+    color: #FF0000;
+    border-color: #FF0000;
+}
+
+.ig {
+    margin-left: 14px;
+    color: #99AAB5;
+}
+
+.ig:hover,
+.ig:focus,
+.ig:active {
+    color: #DD2A7B;
+    border-color: #DD2A7B;
+}
+
+.steam {
+    margin-left: 14px;
+    color: #99AAB5;
+}
+
+.steam:hover,
+.steam:focus,
+.steam:active {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.reddit {
+    margin-left: 14px;
+    color: #99AAB5;
+}
+
+.reddit:hover {
+    color: #FF4500;
+    border-color: #FF4500;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.countdown {
+    text-align: center;
+    margin-top: 230px;
+}
+
+.countdown h1 {
+    font-size: 80px;
+}
+
+.countdown p {
+    font-size: 68px;
+    font-style: oblique;
+}
+
+.footer {
+    margin-top: 50px;
+}
+
+body {
+  width: 100%;
+  overflow: 'hidden';
+}
+
+#canvas {
+  width: 10000%;
+  height: 100%;
+  background: #2C2F33;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+
+:root {
+  --text-color: #FFFFFF;
+  --shadow-color: #7289DA;
+  --btn-color: #7289DA;
+  --bg-color: #2C2F33;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  position:relative;
+  padding: 10px 20px;  
+  border: none;
+  background: none;
+  cursor: pointer;
+  
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;  
+  color: var(--text-color);
+  
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px; 
+  z-index: 0;  
+  overflow: hidden;   
+}
+
+button:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+.right::after, button::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events:none;
+}
+
+button::after{
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
+} 
+
+.right, .left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.right {
+  left: 66%;
+}
+.left {
+  right: 66%;
+}
+.right::after {
+  top: -30px;
+  left: calc(-66% - 20px);
+  
+  background-color: var(--bg-color);
+  color:transparent;
+  transition: transform .4s ease-out;
+  transform: translate(0, -90%) rotate(0deg)
+}
+
+button:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg)
+}
+
+button .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg)
+}
+
+button .left:hover ~ .right::after {
+  transform: translate(0, -50%) rotate(7deg)
+}
+
+/* bubbles */
+button::before {
+  content: '';
+  pointer-events: none;
+  opacity: .6;
+  background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2C2F33;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7289DA;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #99AAB5;
+}
